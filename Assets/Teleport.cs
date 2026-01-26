@@ -19,14 +19,11 @@ public class Teleport : MonoBehaviour
             {
                 player.transform.position = outside.transform.position;
                 inRoom = !inRoom;
-                Debug.Log("Outside Coords: ");
             }
             else
             {
                 player.transform.position = room.transform.position;
                 inRoom = !inRoom;
-                Debug.Log("Inside Coords: ");
-
             }
         };
     }

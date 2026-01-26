@@ -6,6 +6,7 @@ using UnityEngine.InputSystem;
 public class LightSwitch : MonoBehaviour {
     public new Light light;
     public InputActionReference action;
+    private bool isLightChanged = false;
 
     void Start() 
     {
@@ -13,7 +14,16 @@ public class LightSwitch : MonoBehaviour {
         action.action.Enable();
         action.action.performed += (ctx) =>
         {
-            light.color = new Color(1f, 0.4f, 0.7f);
+            if(isLightChanged == false)
+            {
+                light.color = new Color(0.0f, 1.0f, 1.0f);
+                isLightChanged = true;
+            }
+            else
+            {
+                light.color = new Color(1.0f, 1.0f, 1.0f);
+                isLightChanged = false;
+            }
         };
 
     }
