@@ -7,7 +7,7 @@ public class RabbitJump : MonoBehaviour
     public float maxJumpHeight = 1.0f;
 
     private  float jumpHeight = 0.0f;
-    private bool isGoingup = true;
+    private bool isGoingUp = true;
     public float degreesPerSecond = 50.0f;
     public float jumpSpeed = 0.01f;
 
@@ -16,13 +16,13 @@ public class RabbitJump : MonoBehaviour
     {
         if(jumpHeight >= maxJumpHeight)
         {
-            isGoingup = false;
+            isGoingUp = false;
         }
         if(jumpHeight <= 0)
         {
-            isGoingup = true;
+            isGoingUp = true;
         }
-        if (isGoingup)
+        if (isGoingUp)
         {
             jumpHeight += jumpSpeed;
         }

@@ -17,12 +17,12 @@ public class Teleport : MonoBehaviour
         {
             if (inRoom)
             {
-                player.transform.position = outside.transform.position;
+                player.transform.position = new Vector3(outside.transform.position.x, 1, outside.transform.position.z);
                 inRoom = !inRoom;
             }
             else
             {
-                player.transform.position = room.transform.position;
+                player.transform.position = new Vector3(room.transform.position.x, 1, room.transform.position.z);
                 inRoom = !inRoom;
             }
         };
